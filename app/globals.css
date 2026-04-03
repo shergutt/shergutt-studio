@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #09090B;
+    color: #FFFFFF;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .text-accent { color: #06B6D4; }
+  .text-accent-light { color: #22D3EE; }
+  .hover\:text-accent:hover { color: #06B6D4; }
+  .hover\:text-accent-light:hover { color: #22D3EE; }
+  .bg-studio-black { background-color: #09090B; }
+  .bg-studio-dark { background-color: #111113; }
+  .bg-studio-card { background-color: #18181B; }
+  .border-studio { border-color: #27272A; }
+  .border-studio-light { border-color: #3F3F46; }
+  .border-accent { border-color: #06B6D4; }
+  .hover\:border-accent:hover { border-color: #06B6D4; }
+  .bg-accent { background-color: #06B6D4; }
+  .hover\:bg-accent:hover { background-color: #22D3EE; }
+  .bg-accent\/10 { background-color: rgba(6, 182, 212, 0.1); }
+  .border-accent\/20 { border-color: rgba(6, 182, 212, 0.2); }
+  .border-white\/10 { border-color: rgba(255, 255, 255, 0.1); }
+  .text-white\/60 { color: rgba(255, 255, 255, 0.6); }
+  .text-white\/40 { color: rgba(255, 255, 255, 0.4); }
+  .hover\:text-white\/60:hover { color: rgba(255, 255, 255, 0.6); }
+  .hover\:text-white:hover { color: #FFFFFF; }
+  .hover\:bg-studio-card:hover { background-color: #18181B; }
+  .from-accent\/20 { --tw-gradient-from: rgba(6, 182, 212, 0.2); --tw-gradient-to: rgba(6, 182, 212, 0); }
+  .to-transparent { --tw-gradient-to: transparent; }
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #09090B; }
+::-webkit-scrollbar-thumb { background: #27272A; }
+::-webkit-scrollbar-thumb:hover { background: #06B6D4; }
+
+::selection { background-color: #06B6D4; color: #09090B; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1.2s infinite;
+}
