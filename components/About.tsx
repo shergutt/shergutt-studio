@@ -18,17 +18,17 @@ export default function About() {
 
             <div className="space-y-5 text-white/50 leading-relaxed text-base">
               <p>
-                I'm a full-stack developer. I build web applications,
+                We're a full-stack development studio. We build web applications,
                 AI-powered tools, and digital products — from concept to deployment.
               </p>
               <p>
-                I work across the entire stack: modern React frontends, robust backends,
-                database design, and cloud deployments. I care about clean code,
+                We work across the entire stack: modern React frontends, robust backends,
+                database design, and cloud deployments. We care about clean code,
                 fast interfaces, and products that actually solve problems.
               </p>
               <p>
                 Whether it's a course platform with AI integration, a CRM system, or a
-                landing page — I treat every project with the same standard: ship
+                landing page — we treat every project with the same standard: ship
                 something that works and sounds right.
               </p>
             </div>

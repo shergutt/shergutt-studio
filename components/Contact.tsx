@@ -35,7 +35,7 @@ export default function Contact() {
             </h2>
             <p className="text-white/40 text-base leading-relaxed mb-10">
               Have a project in mind? A question? Just want to connect?
-              Reach out and I'll get back to you as soon as possible.
+              Reach out and we'll get back to you as soon as possible.
             </p>
 
             <div className="flex flex-col gap-4">
@@ -53,7 +53,7 @@ export default function Contact() {
             {/* Social links */}
             <div className="mt-10 pt-10 border-t border-white/5">
               <p className="text-white/20 text-xs tracking-widest uppercase mb-4">
-                Find me online
+                Find us online
               </p>
               <div className="flex gap-4">
                 {[

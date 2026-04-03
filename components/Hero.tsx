@@ -23,7 +23,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-white/50 text-lg md:text-xl mb-2 font-light">
-          Full-Stack Developer
+          Full-Stack Studio
         </p>
 
         {/* Tagline */}

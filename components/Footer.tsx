@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex flex-col md:items-start items-center gap-1">
           <span className="text-white font-bold text-base">Shergutt<span className="text-accent">.</span>Studio</span>
-          <span className="text-white/20 text-xs">Full-Stack Developer</span>
+          <span className="text-white/20 text-xs">Full-Stack Studio</span>
         </div>
 
         <div className="flex items-center gap-6">
