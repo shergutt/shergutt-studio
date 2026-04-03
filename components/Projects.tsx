@@ -31,12 +31,12 @@ const projects = [
     accent: "#10B981",
   },
   {
-    name: "New Jaco Oasis",
+    name: "Sunset Oasis Jaco",
     category: "Apartment Rental",
     description:
       "Landing page for a vacation apartment rental in Jacó, Costa Rica. Property showcase, booking info, and contact form for inquiries.",
     tech: ["Next.js", "Tailwind CSS"],
-    url: "https://new-jaco-oasis.vercel.app",
+    url: "https://www.thesunsetoasis.com/",
     github: null,
     status: "Live",
     accent: "#F59E0B",
@@ -58,7 +58,7 @@ const projects = [
     description:
       "Customer relationship management system tailored for hotel operations. Manages guest profiles, reservations, and communications in one platform.",
     tech: ["React", "Node.js", "PostgreSQL", "Express"],
-    url: "https://hotel-crm-five.vercel.app/",
+    url: "https://hotel-crm.shergutt.lat/",
     github: null,
     status: "Live",
     accent: "#EC4899",

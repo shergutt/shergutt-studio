@@ -58,7 +58,7 @@ export default function Contact() {
               <div className="flex gap-4">
                 {[
                   { label: "GitHub", href: "#" },
-                  { label: "Instagram", href: "#" },
+                  { label: "Instagram", href: "https://instagram.com/shergutt.studio" },
                   { label: "Facebook", href: "#" },
                 ].map((s) => (
                   <a

@@ -53,7 +53,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="#" className="text-white/40 hover:text-accent transition-colors"><InstagramIcon /></a>
+          <a href="https://instagram.com/shergutt.studio" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent transition-colors"><InstagramIcon /></a>
           <a href="#" className="text-white/40 hover:text-accent transition-colors"><FacebookIcon /></a>
           <a href="#" className="text-white/40 hover:text-accent transition-colors"><WhatsAppIcon /></a>
         </div>

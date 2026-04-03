@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-6">
-          <a href="#" className="text-white/30 hover:text-accent transition-colors"><InstagramIcon /></a>
+          <a href="https://instagram.com/shergutt.studio" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-accent transition-colors"><InstagramIcon /></a>
           <a href="#" className="text-white/30 hover:text-accent transition-colors"><FacebookIcon /></a>
           <a href="#" className="text-white/30 hover:text-accent transition-colors"><WhatsAppIcon /></a>
         </div>
