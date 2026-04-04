@@ -29,8 +29,8 @@ export default function Footer() {
 
         <div className="flex items-center gap-6">
           <a href="https://instagram.com/shergutt.studio" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-accent transition-colors"><InstagramIcon /></a>
-          <a href="#" className="text-white/30 hover:text-accent transition-colors"><FacebookIcon /></a>
-          <a href="#" className="text-white/30 hover:text-accent transition-colors"><WhatsAppIcon /></a>
+          <a href="https://www.facebook.com/profile.php?id=61575592123537" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-accent transition-colors"><FacebookIcon /></a>
+          <a href="https://wa.me/50686133631" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-accent transition-colors"><WhatsAppIcon /></a>
         </div>
 
         <p className="text-white/20 text-xs">© 2026 Shergutt Studio. All rights reserved.</p>
