@@ -11,10 +11,11 @@ export default function Contact() {
     const data = new FormData(form);
     const name = data.get("name") as string;
     const email = data.get("email") as string;
+    const type = data.get("type") as string;
     const message = data.get("message") as string;
 
-    const whatsapp = `https://wa.me/50688888888?text=${encodeURIComponent(
-      `Hola Sher, me llamo ${name}.\n\n${message}\n\nMi email: ${email}`
+    const whatsapp = `https://wa.me/50686133631?text=${encodeURIComponent(
+      `¡Hola! Me gustaría cotizar un proyecto.\n\n*Nombre:* ${name}\n*Email:* ${email}\n*Tipo de proyecto:* ${type}\n*Mensaje:* ${message}`
     )}`;
     window.open(whatsapp, "_blank");
     setStatus("sent");
@@ -40,13 +41,13 @@ export default function Contact() {
 
             <div className="flex flex-col gap-4">
               <a
-                href="mailto:shergutt@example.com"
+                href="mailto:alexaderchr@valorix.lat"
                 className="flex items-center gap-3 text-white/50 hover:text-accent transition-colors group"
               >
                 <div className="w-10 h-10 rounded-sm bg-studio-card border border-white/5 flex items-center justify-center group-hover:border-accent/30 transition-colors">
                   <Mail size={16} />
                 </div>
-                <span className="text-sm">shergutt@example.com</span>
+                <span className="text-sm">alexaderchr@valorix.lat</span>
               </a>
             </div>
 
@@ -57,9 +58,8 @@ export default function Contact() {
               </p>
               <div className="flex gap-4">
                 {[
-                  { label: "GitHub", href: "#" },
                   { label: "Instagram", href: "https://instagram.com/shergutt.studio" },
-                  { label: "Facebook", href: "#" },
+                  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61575592123537" },
                 ].map((s) => (
                   <a
                     key={s.label}
