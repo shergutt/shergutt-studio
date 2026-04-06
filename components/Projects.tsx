@@ -9,15 +9,15 @@ const GitHubIcon = ({ size = 14 }: { size?: number }) => (
 
 const projects = [
   {
-    name: "MindForge",
-    category: "AI Course Platform",
+    name: "Mauren Chacon",
+    category: "Nail Salon Landing Page",
     description:
-      "Full-stack course platform with AI integration. Features course management, PayPal payments, and an AI tutor powered by MiniMax TTS. Seeded with real AI courses in Spanish.",
-    tech: ["Next.js", "Prisma", "PostgreSQL", "PayPal", "MiniMax TTS"],
-    url: "https://mindforge.valorix.lat",
+      "Elegant manicure and pedicure landing page in Spanish with service showcases, gallery, testimonials, and an appointment flow for in-studio or at-home bookings.",
+    tech: ["HTML", "Tailwind CSS", "JavaScript", "Responsive Design"],
+    url: "https://nailsalon.shergutt.lat/",
     github: null,
     status: "Live",
-    accent: "#06B6D4",
+    accent: "#F4B6C2",
   },
   {
     name: "Habitly",
