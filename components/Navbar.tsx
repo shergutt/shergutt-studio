@@ -21,6 +21,7 @@ const FacebookIcon = () => (
 );
 
 const links = [
+  { href: "#pricing", label: "Pricing" },
   { href: "#projects", label: "Projects" },
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },

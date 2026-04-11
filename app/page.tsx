@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Pricing from "@/components/Pricing";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
@@ -12,7 +14,9 @@ export default function Home() {
     <main className="bg-studio-black">
       <ScrollReveal />
       <Navbar />
+      <FloatingWhatsApp />
       <Hero />
+      <Pricing />
       <Projects />
       <About />
       <Skills />

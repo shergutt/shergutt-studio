@@ -50,7 +50,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <a
-        href="#projects"
+        href="#pricing"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 cursor-pointer hover:opacity-80 transition-opacity"
       >
         <span className="text-white/30 text-xs tracking-widest uppercase">Scroll</span>
