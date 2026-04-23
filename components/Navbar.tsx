@@ -21,11 +21,11 @@ const FacebookIcon = () => (
 );
 
 const links = [
-  { href: "#pricing", label: "Pricing" },
-  { href: "#projects", label: "Projects" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
+  { href: "#services", label: "Servicios" },
+  { href: "#projects", label: "Proyectos" },
+  { href: "#pricing", label: "Precios" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "Contacto" },
 ];
 
 export default function Navbar() {
@@ -55,8 +55,8 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-4">
           <a href="https://instagram.com/shergutt.studio" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent transition-colors"><InstagramIcon /></a>
-          <a href="#" className="text-white/40 hover:text-accent transition-colors"><FacebookIcon /></a>
-          <a href="#" className="text-white/40 hover:text-accent transition-colors"><WhatsAppIcon /></a>
+          <a href="https://www.facebook.com/profile.php?id=61575592123537" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent transition-colors"><FacebookIcon /></a>
+          <a href="https://wa.me/50686133631" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent transition-colors"><WhatsAppIcon /></a>
         </div>
 
         <button className="md:hidden text-white/60" onClick={() => setOpen(!open)}>
@@ -72,9 +72,9 @@ export default function Navbar() {
             </a>
           ))}
           <div className="flex gap-4 pt-2">
-            <a href="#" className="text-white/40 hover:text-accent"><InstagramIcon /></a>
-            <a href="#" className="text-white/40 hover:text-accent"><FacebookIcon /></a>
-            <a href="#" className="text-white/40 hover:text-accent"><WhatsAppIcon /></a>
+            <a href="https://instagram.com/shergutt.studio" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent"><InstagramIcon /></a>
+            <a href="https://www.facebook.com/profile.php?id=61575592123537" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent"><FacebookIcon /></a>
+            <a href="https://wa.me/50686133631" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent"><WhatsAppIcon /></a>
           </div>
         </div>
       )}

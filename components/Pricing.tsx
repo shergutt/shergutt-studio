@@ -1,85 +1,68 @@
 import { ArrowRight, Check } from "lucide-react";
 
-type Plan = {
-  name: string;
-  price: string;
-  audience: string;
-  details: string[];
-  cta: string;
-  accent: string;
-  featured: boolean;
-  badge: string;
-  note?: string;
-};
-
-const plans: Plan[] = [
+const plans = [
   {
     name: "Landing Page",
-    price: "$200 USD",
-    audience: "For freelancers and new businesses that need to be online now.",
-    details: [
-      "1 professional landing page ready to sell",
-      "Looks perfect on phone and desktop",
-      "Contact form that sends leads straight to your WhatsApp",
-      "Basic SEO so customers can find you on Google",
-      "Ready in just 3 days",
+    price: "Desde $250",
+    badge: "Inicio rápido",
+    audience: "Para negocios que necesitan estar online rápido con una página profesional que genera confianza y consultas.",
+    features: [
+      "1 página profesional lista para vender",
+      "Diseño responsive en teléfono y escritorio",
+      "Formulario que envía directo a tu WhatsApp",
+      "SEO básico para encontrarte en Google",
+      "Entrega en 3 a 5 días",
     ],
-    cta: "Book This Package",
+    cta: "Cotizar landing page",
     accent: "#06B6D4",
-    featured: true,
-    badge: "Fast launch",
   },
   {
-    name: "Sistema web / CRM",
-    price: "Desde $500 USD",
+    name: "Automatización Simple",
+    price: "Desde $350",
+    badge: "Ahorra tiempo",
     audience:
-      "Ideal para gestionar clientes y operaciones de negocio, por ejemplo inventarios, hoteles u otros procesos administrativos.",
-    details: [
-      "Sistema web hecho a la medida para procesos internos",
-      "También incluye hosting y dominio",
-      "Panel para administrar clientes, ventas u operaciones",
-      "Escalable según el flujo de tu negocio",
-      "No incluye manejo de documentos ni archivos multimedia",
+      "Para negocios que hacen trabajo manual Repetitivo y quieren automatizar agenda, respuestas o seguimientos.",
+    features: [
+      "Automatización de respuestas por WhatsApp",
+      "Integración con tu agenda o calendario",
+      "Notificaciones automáticas a clientes",
+      "Conexión con tus herramientas existentes",
+      "Reducción de trabajo manual Repetitivo",
     ],
-    note: "Esas funciones tienen un costo adicional.",
-    cta: "Cotizar este sistema",
+    cta: "Cotizar automatización",
+    accent: "#10B981",
+  },
+  {
+    name: "Sistema Interno / Mini CRM",
+    price: "Desde $1,500",
+    badge: "Orden total",
+    audience:
+      "Para negocios que necesitan un sistema a la medida para gestionar clientes, citas, historial y operaciones.",
+    features: [
+      "Sistema a la medida para tu flujo de negocio",
+      "Gestión de clientes y seguimiento",
+      "Panel de administración claro",
+      "Escalable según crezca tu negocio",
+      "Incluye hosting y dominio",
+    ],
+    cta: "Cotizar sistema interno",
     accent: "#F59E0B",
-    featured: false,
-    badge: "Custom ops",
-  },
-  {
-    name: "Tienda online / Ecommerce",
-    price: "$650 USD",
-    audience:
-      "Incluye página web ecommerce con integración de PayPal Checkout para pagos en línea.",
-    details: [
-      "Catálogo de productos listo para vender",
-      "Checkout con PayPal para pagos en línea",
-      "También incluye hosting y dominio",
-      "Diseño responsive para teléfono y escritorio",
-      "Base lista para seguir creciendo tu tienda",
-    ],
-    cta: "Cotizar esta tienda",
-    accent: "#22C55E",
-    featured: false,
-    badge: "Online sales",
   },
 ];
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="bg-studio-black py-28 px-6 border-y border-white/5">
+    <section id="pricing" className="py-28 px-6 bg-studio-black border-y border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="max-w-3xl mb-16">
           <p className="text-accent text-xs tracking-[0.3em] uppercase font-medium mb-3">
-            Pricing
+            Precios
           </p>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-5">
-            Packages that ship fast<span className="text-accent">.</span>
+            Precios claros, sin sorpresas<span className="text-accent">.</span>
           </h2>
           <p className="text-white/40 text-base md:text-lg leading-relaxed">
-            Clear starting prices for the most requested projects. If your scope
-            is different, we can quote a custom build.
+            Precios de partida para los servicios más solicitados. Si tu proyecto tiene un alcance diferente, cotizamos a la medida.
           </p>
         </div>
 
@@ -87,78 +70,54 @@ export default function Pricing() {
           {plans.map((plan) => (
             <article
               key={plan.name}
-              className={`relative flex flex-col rounded-sm border overflow-hidden transition-all duration-300 ${
-                plan.featured
-                  ? "bg-studio-card border-accent/30 shadow-[0_0_0_1px_rgba(6,182,212,0.14)]"
-                  : "bg-studio-dark border-white/5 hover:border-white/15"
-              }`}
+              className="flex flex-col rounded-sm border border-white/5 hover:border-white/15 transition-all duration-300 bg-studio-card overflow-hidden"
             >
               <div className="h-1 w-full" style={{ backgroundColor: plan.accent }} />
 
               <div className="p-8 flex flex-col flex-grow">
-                <div className="flex items-start justify-between gap-4 mb-8">
-                  <div>
-                    <p
-                      className="text-xs tracking-[0.25em] uppercase font-medium mb-3"
-                      style={{ color: plan.accent }}
-                    >
-                      {plan.badge}
-                    </p>
-                    <h3 className="text-2xl font-semibold text-white mb-3">
-                      {plan.name}
-                    </h3>
-                    <div className="flex items-end gap-2">
-                      <span className="text-3xl md:text-4xl font-bold tracking-tight text-white">
-                        {plan.price}
-                      </span>
-                    </div>
-                  </div>
-
-                  {plan.featured ? (
-                    <span className="shrink-0 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-accent">
-                      Most popular
-                    </span>
-                  ) : null}
+                <div className="mb-8">
+                  <p
+                    className="text-xs tracking-[0.2em] uppercase font-medium mb-3"
+                    style={{ color: plan.accent }}
+                  >
+                    {plan.badge}
+                  </p>
+                  <h3 className="text-2xl font-semibold text-white mb-2">
+                    {plan.name}
+                  </h3>
+                  <span className="text-3xl md:text-4xl font-bold tracking-tight text-white">
+                    {plan.price}
+                  </span>
                 </div>
 
-                <p className="text-white/50 leading-relaxed mb-8 min-h-[96px]">
+                <p className="text-white/50 text-sm leading-relaxed mb-8">
                   {plan.audience}
                 </p>
 
                 <div className="space-y-3 mb-8 flex-grow">
-                  {plan.details.map((detail) => (
-                    <div key={detail} className="flex items-start gap-3">
+                  {plan.features.map((f) => (
+                    <div key={f} className="flex items-start gap-3">
                       <div
-                        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border"
+                        className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full"
                         style={{
-                          borderColor: `${plan.accent}33`,
                           backgroundColor: `${plan.accent}14`,
                           color: plan.accent,
                         }}
                       >
-                        <Check size={12} />
+                        <Check size={11} />
                       </div>
-                      <p className="text-sm leading-relaxed text-white/70">
-                        {detail}
-                      </p>
+                      <p className="text-sm leading-relaxed text-white/70">{f}</p>
                     </div>
                   ))}
                 </div>
 
                 <div className="pt-6 border-t border-white/5">
-                  {plan.note ? (
-                    <p className="text-xs leading-relaxed text-white/35 mb-4">
-                      {plan.note}
-                    </p>
-                  ) : null}
-
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-white"
+                    className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:opacity-80"
                     style={{ color: plan.accent }}
                   >
-                    {plan.cta}
-                    <ArrowRight size={14} />
+                    {plan.cta} <ArrowRight size={14} />
                   </a>
                 </div>
               </div>

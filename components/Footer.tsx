@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex flex-col md:items-start items-center gap-1">
           <span className="text-white font-bold text-base">Shergutt<span className="text-accent">.</span>Studio</span>
-          <span className="text-white/20 text-xs">Full-Stack Studio</span>
+          <span className="text-white/20 text-xs">Páginas web y automatizaciones — Costa Rica</span>
         </div>
 
         <div className="flex items-center gap-6">
@@ -33,7 +33,7 @@ export default function Footer() {
           <a href="https://wa.me/50686133631" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-accent transition-colors"><WhatsAppIcon /></a>
         </div>
 
-        <p className="text-white/20 text-xs">© 2026 Shergutt Studio. All rights reserved.</p>
+        <p className="text-white/20 text-xs">© 2026 Shergutt.Studio — Costa Rica</p>
       </div>
     </footer>
   );

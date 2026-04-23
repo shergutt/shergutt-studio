@@ -15,7 +15,12 @@ export default function Contact() {
     const message = data.get("message") as string;
 
     const whatsapp = `https://wa.me/50686133631?text=${encodeURIComponent(
-      `¡Hola! Me gustaría cotizar un proyecto.\n\n*Nombre:* ${name}\n*Email:* ${email}\n*Tipo de proyecto:* ${type}\n*Mensaje:* ${message}`
+      `¡Hola! Me gustaría cotizar un proyecto.
+
+*Nombre:* ${name}
+*Email:* ${email}
+*Tipo de proyecto:* ${type}
+*Mensaje:* ${message}`
     )}`;
     window.open(whatsapp, "_blank");
     setStatus("sent");
@@ -26,54 +31,39 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-          {/* Left — info */}
           <div>
             <p className="text-accent text-xs tracking-[0.3em] uppercase font-medium mb-3">
-              Contact
+              Contacto
             </p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
-              Let's build something<span className="text-accent">.</span>
+              Cuéntanos sobre tu proyecto<span className="text-accent">.</span>
             </h2>
             <p className="text-white/40 text-base leading-relaxed mb-10">
-              Have a project in mind? A question? Just want to connect?
-              Reach out and we'll get back to you as soon as possible.
+              Sin compromiso. Te respondemos en menos de 24 horas con una propuesta concreta.
             </p>
 
             <div className="flex flex-col gap-4">
               <a
-                href="mailto:alexaderchr@valorix.lat"
+                href="mailto:alexanderchr@valorix.lat"
                 className="flex items-center gap-3 text-white/50 hover:text-accent transition-colors group"
               >
                 <div className="w-10 h-10 rounded-sm bg-studio-card border border-white/5 flex items-center justify-center group-hover:border-accent/30 transition-colors">
                   <Mail size={16} />
                 </div>
-                <span className="text-sm">alexaderchr@valorix.lat</span>
+                <span className="text-sm">alexanderchr@valorix.lat</span>
               </a>
             </div>
 
-            {/* Social links */}
             <div className="mt-10 pt-10 border-t border-white/5">
               <p className="text-white/20 text-xs tracking-widest uppercase mb-4">
-                Find us online
+                Ubicación
               </p>
-              <div className="flex gap-4">
-                {[
-                  { label: "Instagram", href: "https://instagram.com/shergutt.studio" },
-                  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61575592123537" },
-                ].map((s) => (
-                  <a
-                    key={s.label}
-                    href={s.href}
-                    className="text-white/30 text-sm hover:text-accent transition-colors border border-white/10 px-4 py-2 rounded-sm hover:border-accent/30"
-                  >
-                    {s.label}
-                  </a>
-                ))}
-              </div>
+              <p className="text-white/50 text-sm">
+                Trabajamos con clientes en todo Costa Rica — en persona, por videollamada o WhatsApp.
+              </p>
             </div>
           </div>
 
-          {/* Right — form */}
           <div>
             <form
               onSubmit={handleSubmit}
@@ -82,7 +72,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-2">
                   <label className="text-white/40 text-xs tracking-wide uppercase">
-                    Name
+                    Nombre
                   </label>
                   <input
                     name="name"
@@ -93,13 +83,13 @@ export default function Contact() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-white/40 text-xs tracking-wide uppercase">
-                    Email
+                    Correo
                   </label>
                   <input
                     name="email"
                     type="email"
                     required
-                    placeholder="tu@email.com"
+                    placeholder="tu@correo.com"
                     className="bg-studio-dark border border-white/10 text-white text-sm px-4 py-3 rounded-sm focus:border-accent/50 focus:outline-none transition-colors placeholder:text-white/20"
                   />
                 </div>
@@ -107,31 +97,29 @@ export default function Contact() {
 
               <div className="flex flex-col gap-2">
                 <label className="text-white/40 text-xs tracking-wide uppercase">
-                  Project Type
+                  Tipo de proyecto
                 </label>
                 <select
                   name="type"
                   className="bg-studio-dark border border-white/10 text-white/60 text-sm px-4 py-3 rounded-sm focus:border-accent/50 focus:outline-none transition-colors cursor-pointer appearance-none"
                 >
-                  <option>Web Application</option>
-                  <option>Landing Page</option>
-                  <option>AI Integration</option>
-                  <option>Mobile App</option>
-                  <option>Backend / API</option>
-                  <option>Consulting</option>
-                  <option>Other</option>
+                  <option>Landing page</option>
+                  <option>Página web empresarial</option>
+                  <option>Automatización</option>
+                  <option>Sistema interno / CRM</option>
+                  <option>No estoy seguro, quiero asesoría</option>
                 </select>
               </div>
 
               <div className="flex flex-col gap-2">
                 <label className="text-white/40 text-xs tracking-wide uppercase">
-                  Message
+                  Cuéntanos más
                 </label>
                 <textarea
                   name="message"
                   required
                   rows={5}
-                  placeholder="Cuéntame sobre tu proyecto..."
+                  placeholder="Describe tu proyecto o situación actual..."
                   className="bg-studio-dark border border-white/10 text-white text-sm px-4 py-3 rounded-sm focus:border-accent/50 focus:outline-none transition-colors placeholder:text-white/20 resize-none"
                 />
               </div>
@@ -146,14 +134,14 @@ export default function Contact() {
                 ) : (
                   <>
                     <Send size={15} />
-                    Enviar Mensaje
+                    Enviar mensaje
                   </>
                 )}
               </button>
 
               {status === "sent" && (
                 <p className="text-center text-xs text-white/30">
-                  Redirigiendo a WhatsApp...
+                  Abriendo WhatsApp...
                 </p>
               )}
             </form>
